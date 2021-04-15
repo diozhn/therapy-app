@@ -37,3 +37,16 @@ export function USER_POST(body) {
     }
   }
 }
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: API_URL + "/updateuser",
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    }
+  }
+}

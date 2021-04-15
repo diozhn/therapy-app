@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login/Login";
-import Dashboard from "./components/userDashboard/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import { UserStorage } from './UserContext';
 
 function App() {
