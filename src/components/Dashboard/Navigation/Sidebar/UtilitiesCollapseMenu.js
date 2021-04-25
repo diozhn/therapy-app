@@ -23,13 +23,13 @@ const UtilitiesCollapseMenu = () => {
       >
         <div className="bg-white py-2 collapse-inner rounded">
           <h6 className="collapse-header">Menu Social</h6>
-          <Link className="collapse-item" to="utilities-color.html">
+          <Link className="collapse-item" to="/favoritos">
             Favoritos
           </Link>
-          <Link className="collapse-item" to="utilities-border.html">
+          <Link className="collapse-item" to="/seguindo">
             Seguindo
           </Link>
-          <Link className="collapse-item" to="utilities-animation.html">
+          <Link className="collapse-item" to="/feed">
             Feed
           </Link>
         </div>

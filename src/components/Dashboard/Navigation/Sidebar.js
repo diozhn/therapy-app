@@ -19,15 +19,15 @@ const Sidebar = () => {
       >
         Logo
       </Link>
-      <hr className="sidebar-divider my-0 mt-5 mb-3"></hr>
+      <hr className="sidebar-divider my-0 mt-5 mb-3" />
       <Heading title="Profissionais" />
       <PagesCollapseMenu />
       <UtilitiesCollapseMenu />
-      <hr className="sidebar-divider"></hr>
+      <hr className="sidebar-divider" />
       <Heading title="Atendimento" />
       <PagesCollapseMenuConsults />
       <NavItemCharts />
-      <hr className="sidebar-divider d-none d-md-block"></hr>
+      <hr className="sidebar-divider d-none d-md-block" />
       <SidebarToggle />
     </ul>
   );

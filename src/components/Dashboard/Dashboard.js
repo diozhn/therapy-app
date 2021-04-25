@@ -13,7 +13,7 @@ import LogoutModal from "../Dashboard/Details/LogoutModal";
 const Dashboard = () => {
   return (
     <div id="page-top">
-      <div id="wrapper">
+      <div id="wrapper" />
         <Sidebar />
         <div id="content-wrapper" className="d-flex flex-column">
           <div id="content">
@@ -32,7 +32,6 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
       <ScrollTopButton />
       <LogoutModal />
     </div>
