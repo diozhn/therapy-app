@@ -1,4 +1,4 @@
-export const API_URL = 'http://25.34.225.9:8080';
+export const API_URL = 'http://localhost:8080';
 
 export function TOKEN_POST() {
   return {
