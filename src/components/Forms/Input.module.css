@@ -7,7 +7,7 @@
   display: block;
   width: 100%;
   font-size: 1rem;
-  padding: .8rem;
+  padding: .5rem;
   border-radius: 3.125rem;
   transition: 0.2s;
 }
@@ -15,9 +15,9 @@
 .input:focus,
 .input:hover {
   outline: none;
-  border-color: #adadad;
-  background: #eee;
-  box-shadow: 0 0 0 1px rgb(179, 179, 179);
+  border-color: #d8d8d8;
+  background: rgb(241, 241, 241);
+  box-shadow: 0 0 0 1px rgb(241, 241, 241);
 }
 
 .label {

@@ -1,0 +1,56 @@
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 10vh;
+  background: rgb(255, 255, 255)
+}
+
+.nav .social {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  width: 7rem;
+  height: 3rem;
+}
+
+.nav .options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+  height: 5rem;
+}
+
+.nav .options .optionsFast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+}
+
+.nav .profileCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7rem;
+  height: 2.3rem;
+  background: rgb(243, 243, 243);
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.nav .profileCard h1 {
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.nav .profileCard img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}

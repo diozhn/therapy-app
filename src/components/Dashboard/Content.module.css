@@ -1,0 +1,6 @@
+.content {
+  grid-area: content;
+  width: 95vw;
+  height: 80vh;
+  background: #ccc
+}

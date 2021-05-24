@@ -1,0 +1,14 @@
+.logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 10vh;
+  background: rgb(245, 245, 245);
+}
+
+.logo img {
+  width: 2.5rem;
+  height: 3rem;
+}

@@ -1,0 +1,29 @@
+.sidenav {
+  grid-area: sidenav;
+  width: 5vw;
+  background: #ccc
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidenav .options {
+  margin-top: 2rem;
+  display: flex;
+  height: 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidenav .configs {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
