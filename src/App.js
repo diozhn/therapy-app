@@ -1,28 +1,18 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { Router } from "react-router-dom";
 import "./App.css";
-import Login from "./components/Login/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
-import { UserStorage } from './UserContext';
+import { Routes } from "./routes";
+import { UserStorage } from "./UserContext";
+import history from './service/history'
 
 function App() {
   return (
     <UserStorage>
-      <Router>
-        <Switch>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
-          <Route path="/">
-            <Login />
-          </Route>
-        </Switch>
+      <Router history={history} >
+          <Routes />
       </Router>
     </UserStorage>
+
   );
 }
 
