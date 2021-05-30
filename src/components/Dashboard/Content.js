@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 import styles from "./Content.module.css";
+import { Router } from "react-router-dom";
+import { DashboardRoutes } from "./DashboardRoutes";
 
 const Content = () => {
   return (
-    <div className={styles.content}>
+    <Router>
+      <div className={styles.content}>
+        
+      </div>
+    </Router>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Content
+export default Content;
