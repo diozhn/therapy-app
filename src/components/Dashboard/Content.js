@@ -1,15 +1,12 @@
 import React from "react";
 import styles from "./Content.module.css";
-import { Router } from "react-router-dom";
-import { DashboardRoutes } from "./DashboardRoutes";
+import Ticket from "./Pages/Ticket";
 
 const Content = () => {
   return (
-    <Router>
       <div className={styles.content}>
-        
+        <Ticket />
       </div>
-    </Router>
   );
 };
 

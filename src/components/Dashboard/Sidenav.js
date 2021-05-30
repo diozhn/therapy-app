@@ -12,6 +12,11 @@ import {
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 const Sidenav = ({ routes }) => {
+
+  function handleGetTicket() {
+    console.log('ticket');
+  }
+
   return (
       <div className={styles.sidenav}>
         <div className={styles.options}>
@@ -64,11 +69,11 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Ticket</Tooltip>}
           >
-            <Link to={"/dashboard/ticket"}>
+            <button type="button" onClick={handleGetTicket}>
               <FaFeatherAlt
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
-            </Link>
+            </button>
           </OverlayTrigger>
         </div>
         <div className={styles.configs}>

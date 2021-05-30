@@ -7,11 +7,11 @@ import history from './service/history'
 
 function App() {
   return (
-    <Router>
     <UserStorage>
-      <Routes />
+      <Router history={history} >
+          <Routes />
+      </Router>
     </UserStorage>
-    </Router>
 
   );
 }
