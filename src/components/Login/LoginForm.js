@@ -44,6 +44,12 @@ const LoginForm = () => {
             Registre-se
           </Link>
         </p>
+        <p>
+          É um profissonal? 
+           <Link className={styles.button} to="/proregister" style={{marginLeft: '10px'}}>
+            Registre-se
+          </Link>
+        </p>
       </div>
     </section>
   );

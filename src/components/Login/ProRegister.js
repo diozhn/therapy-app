@@ -1,22 +1,23 @@
-import React from "react";
+import React from 'react'
 import Input from "../Forms/Input";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import { USER_POST } from "../../api";
-import { UserContext } from "../../UserContext";
+import { ProContext } from "../../ProContext";
 import useFetch from "../../Hooks/useFetch";
 import Error from "../Helper/Error";
-import styles from "./LoginCreate.module.css";
+import styles from "./ProRegister.module.css";
 
-const LoginCreate = () => {
+
+const ProRegister = () => {
+
   const name = useForm();
   const cpf = useForm("cpf");
+  const idCod = useForm();
   const email = useForm("email");
   const password = useForm("password");
-  const city = useForm();
-  const state = useForm();
 
-  const { userLogin } = React.useContext(UserContext);
+  const { proLogin } = React.useContext(ProContext);
   const { loading, error, request } = useFetch();
 
   async function handleSubmit(event) {
@@ -26,11 +27,10 @@ const LoginCreate = () => {
       cpf: cpf.value,
       email: email.value,
       password: password.value,
-      city: city.value,
-      state: state.value
+      idCod: idCod.value,
     });
     const { response } = await request(url, options);
-      if (response.ok) userLogin(email.value, password.value);
+      if (response.ok) proLogin(email.value, password.value);
     console.log(response);
   }
 
@@ -40,7 +40,7 @@ const LoginCreate = () => {
         <form className={styles.forms} onSubmit={handleSubmit}>
           <h1 className="title">Registre-se</h1>
           <div className={styles.divider}>
-            <Input label="Nome" type="text" name="nome" {...name} style={{display: 'block'}} />
+            <Input label="Nome" type="text" name="nome" {...name} />
             <Input label="CPF" type="text" name="cpf" {...cpf} />
           </div>
           <div className={styles.divider}>
@@ -48,8 +48,7 @@ const LoginCreate = () => {
             <Input label="Senha" type="password" name="password" {...password} />
           </div>
           <div className={styles.divider}>
-            <Input label="Cidade" type="text" name="city" {...city} />
-            <Input label="Estado" type="text" name="state" {...state} />
+            <Input label="Numero do CRP" type="text" name="idCod" {...idCod} />
           </div>
 
           {loading ? (
@@ -61,7 +60,7 @@ const LoginCreate = () => {
         </form>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default LoginCreate;
+export default ProRegister

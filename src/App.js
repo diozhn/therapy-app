@@ -3,16 +3,18 @@ import { Router } from "react-router-dom";
 import "./App.css";
 import { Routes } from "./routes";
 import { UserStorage } from "./UserContext";
-import history from './service/history'
+import history from "./service/history";
+import { ProStorage } from "./ProContext";
 
 function App() {
   return (
-    <UserStorage>
-      <Router history={history} >
+    <ProStorage>
+      <UserStorage>
+        <Router history={history}>
           <Routes />
-      </Router>
-    </UserStorage>
-
+        </Router>
+      </UserStorage>
+    </ProStorage>
   );
 }
 

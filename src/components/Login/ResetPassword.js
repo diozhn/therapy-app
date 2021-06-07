@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from "./Login.module.css";
 
 function ResetPassword() {
   return (
-    <div>
+    <div className={styles.login}>
       adsfgadsfs
     </div>
   )

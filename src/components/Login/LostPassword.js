@@ -5,6 +5,7 @@ import useForm from "../../Hooks/useForm";
 import useFetch from "../../Hooks/useFetch";
 import { PASSWORD_LOST } from "../../api";
 import Error from "../Helper/Error";
+import styles from "./LostPassword.module.css";
 
 function LostPassword() {
   const login = useForm();
@@ -23,12 +24,13 @@ function LostPassword() {
   }
 
   return (
-    <section>
-      <h1 className="title">Recuperar senha</h1>
+    <section className={`${styles.login} animeLeft`}>
+
       {data ? (
         <p style={{color: '#4c1'}}>{data}</p>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form className={styles.forms} onSubmit={handleSubmit}>
+          <h1 className="title">Recuperar senha</h1>
           <Input label="Email" type="text" name="login" {...login} />
           {loading ? (
             <Button disabled>Enviando...</Button>

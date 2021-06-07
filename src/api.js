@@ -24,6 +24,18 @@ export function USER_GET() {
   }
 }
 
+export function PRO_GET() {
+  return {
+    url: API_URL + '/pro',
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer',
+      }
+    }
+  }
+}
+
 export function USER_POST(body) {
   return {
     url: API_URL + '/user',

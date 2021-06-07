@@ -1,5 +1,6 @@
 import React from "react";
 import {  Link } from "react-router-dom";
+import {useComponent, components} from "../../ContentProvider"
 import styles from "./Sidenav.module.css";
 import {
   FaHome,
@@ -10,12 +11,12 @@ import {
   FaFeatherAlt,
 } from "react-icons/fa";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import ContentPage from "./Pages/ContentPage";
 
-const Sidenav = ({ routes }) => {
 
-  function handleGetTicket() {
-    console.log('ticket');
-  }
+const Sidenav = () => {
+
+  const { component, setComponent } = useComponent();
 
   return (
       <div className={styles.sidenav}>
@@ -25,7 +26,7 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Início</Tooltip>}
           >
-            <Link to="/dashboard">
+            <Link onClick={() => setComponent(components[0].component)} to="/dashboard">
               <FaHome
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -36,7 +37,7 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Consultas</Tooltip>}
           >
-            <Link to={"/dashboard/consultas"}>
+            <Link type="button">
               <FaComments
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -47,7 +48,7 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Pagamentos</Tooltip>}
           >
-            <Link to={"/dashboard/pagamentos"}>
+            <Link type="button">
               <FaFileInvoiceDollar
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -58,7 +59,7 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Profissionais</Tooltip>}
           >
-            <Link to={"/dashboard/profissionais"}>
+            <Link type="button">
               <FaUsers
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -69,11 +70,11 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Ticket</Tooltip>}
           >
-            <button type="button" onClick={handleGetTicket}>
+            <Link type="button">
               <FaFeatherAlt
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
-            </button>
+            </Link>
           </OverlayTrigger>
         </div>
         <div className={styles.configs}>
@@ -82,7 +83,7 @@ const Sidenav = ({ routes }) => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Configurações</Tooltip>}
           >
-            <Link to={"/dashboard/configs"}>
+            <Link type="button">
               <FaCogs
                 style={{
                   width: "1.5rem",

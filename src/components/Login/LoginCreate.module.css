@@ -15,12 +15,23 @@
 
 .forms {
   display: flex;
-  justify-content:center;
+  flex-direction: column;
+  justify-content:space-between;
   align-items: center;
   background: #FFFFFF;
-  max-width: 30rem;
+  max-width: 35rem;
   padding: 2rem;
   border-radius: 1rem;
+}
+
+.forms h1 {
+  margin-bottom: 3rem;
+}
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 @media (max-width: 40rem) {

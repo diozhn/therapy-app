@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./Content.module.css";
-import Ticket from "./Pages/Ticket";
 
-const Content = () => {
+
+
+
+const Content = ({children}) => {
   return (
       <div className={styles.content}>
-        <Ticket />
+        {children}
       </div>
   );
+
 };
 
 export default Content;
