@@ -6,15 +6,19 @@ import Register from './pages/Register'
 import { LostPasswordPage } from './pages/LostPassword'
 import { Dashboard } from './pages/Dashboard'
 import { ProRegisterPage } from './pages/ProRegister'
+import { ConsultasComponent } from './pages/Dashboard/Consultas';
+import { ChatPage } from './pages/Dashboard/Chat';
 
 export const Routes = () => {
   return (
     <Switch>
       <Route path="/" component={Login} exact />
-      <Route path="/register" component={Register} exact />
+      <Route path="/register" component={Register} />
       <Route path="/lostpassword" component={LostPasswordPage} exact />
-      <Route path="/proregister" component={ProRegisterPage} exact />
+      <Route path="/proregister" component={ProRegisterPage} />
       <Route path="/dashboard" component={Dashboard} exact />
+      <Route path="/consultas" component={ConsultasComponent} exact />
+      <Route path="/chat" component={ChatPage} exact />
       <Route component = {() => <div>Pagina não encontrada</div>} />
     </Switch>
   )

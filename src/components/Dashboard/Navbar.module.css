@@ -21,8 +21,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 12rem;
-  height: 5rem;
 }
 
 .nav .options .optionsFast {
@@ -38,7 +36,6 @@
   align-items: center;
   width: 7rem;
   height: 2.3rem;
-  background: rgb(243, 243, 243);
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
@@ -50,7 +47,7 @@
 }
 
 .nav .profileCard img {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 }

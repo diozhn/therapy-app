@@ -8,6 +8,7 @@ const Input = ({ placeholder, label, type, name, value, onChange, error, onBlur 
         {label}
       </label>
       <input 
+        placeholder={placeholder}
         id={name}
         name={name}
         className={styles.input}
