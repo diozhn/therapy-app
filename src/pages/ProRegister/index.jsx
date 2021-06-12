@@ -1,4 +1,4 @@
-import ProRegister from  '../../components/Login/ProRegister'
+import ProRegister from '../../components/Login/ProRegister'
 
 export function ProRegisterPage() {
   return (

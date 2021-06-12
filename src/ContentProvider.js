@@ -3,7 +3,7 @@ import ContentPage from "./components/Dashboard/Pages/ContentPage";
 import Consultas from "./components/Dashboard/Pages/Consultas";
 import Pagamentos from "./components/Dashboard/Pages/Pagamentos";
 import Profissionais from "./components/Dashboard/Pages/Profissionais";
-import ProRegister from "./components/Dashboard/Pages/ProRegister";
+import ProRegister from "./components/Login/ProRegister";
 import Ticket from "./components/Dashboard/Pages/Ticket";
 import Configs from "./components/Dashboard/Pages/Configs";
 

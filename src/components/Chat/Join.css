@@ -1,0 +1,45 @@
+.joinOuterContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #ccc;
+}
+
+.joinInnerContainer {
+  width: 30%;
+  padding: 50px 30px;
+  border-radius: 20px;
+  background: rgb(100, 182, 172);
+}
+
+.joinInput {
+  background: #FFFFFF;
+  border-radius: 15px;
+  border: none;
+  padding: 15px 20px;
+  margin-top: 10px;
+  width: 100%
+}
+
+.heading {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.button {
+  color: rgb(100, 182, 172) !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #FFFFFF;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  width: 100%
+}
