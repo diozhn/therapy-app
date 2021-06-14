@@ -15,6 +15,10 @@ const types = {
     regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
     message: 'Sua senha precisa ter pelo menos: 1 digito, 1 letra minúscula, 1 letra maiúscula e no mínimo 8 caracteres.'
   },
+
+  userId: {
+    
+  }
 }
 
 const useForm = (type) => {
