@@ -38,9 +38,9 @@ export default function SignIn() {
           </div>
           <Link
             onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-            to={`/chat?name=${name}&room=${room}`}
+            to={`/dashboard/consultas/chat?name=${name}&room=${room}`}
           >
-            <button className={"button mt-20"} type="submit">
+            <button className={"button mt-20"} type="submit" style={{cursor: "pointer"}}>
               Entrar no chat
             </button>
           </Link>

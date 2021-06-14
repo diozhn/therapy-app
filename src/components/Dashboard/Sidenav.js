@@ -8,7 +8,7 @@ import {
   FaFileInvoiceDollar,
   FaUsers,
   FaCogs,
-  FaFeatherAlt,
+  FaDiscord,
 } from "react-icons/fa";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import ContentPage from "./Pages/ContentPage";
@@ -37,7 +37,7 @@ const Sidenav = () => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Consultas</Tooltip>}
           >
-            <Link type="button">
+            <Link type="button" to="/dashboard/consultas" >
               <FaComments
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -48,7 +48,7 @@ const Sidenav = () => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Pagamentos</Tooltip>}
           >
-            <Link type="button">
+            <Link type="button" to="/dashboard/pagamentos">
               <FaFileInvoiceDollar
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -59,7 +59,7 @@ const Sidenav = () => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Profissionais</Tooltip>}
           >
-            <Link type="button">
+            <Link type="button" to="/dashboard/profissionais">
               <FaUsers
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
@@ -68,13 +68,15 @@ const Sidenav = () => {
           <OverlayTrigger
             key="right"
             placement="right"
-            overlay={<Tooltip id={`tooltip-right`}>Ticket</Tooltip>}
+            overlay={<Tooltip id={`tooltip-right`}>Suporte</Tooltip>}
           >
-            <Link type="button">
-              <FaFeatherAlt
+
+              <a href="https://discord.gg/r79CGkYPgh">
+              <FaDiscord
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />
-            </Link>
+              </a>
+
           </OverlayTrigger>
         </div>
         <div className={styles.configs}>
@@ -83,7 +85,7 @@ const Sidenav = () => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Configurações</Tooltip>}
           >
-            <Link type="button">
+            <Link type="button" to="/dashboard/configs">
               <FaCogs
                 style={{
                   width: "1.5rem",

@@ -17,8 +17,8 @@ export const Routes = () => {
       <Route path="/lostpassword" component={LostPasswordPage} exact />
       <Route path="/proregister" component={ProRegisterPage} />
       <Route path="/dashboard" component={Dashboard} exact />
-      <Route path="/consultas" component={ConsultasComponent} exact />
-      <Route path="/chat" component={ChatPage} exact />
+      <Route path="/dashboard/consultas" component={ConsultasComponent} exact />
+      <Route path="dashboard/consultas/chat" component={ChatPage} />
       <Route component = {() => <div>Pagina não encontrada</div>} />
     </Switch>
   )
