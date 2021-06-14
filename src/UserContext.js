@@ -25,6 +25,7 @@ export const UserStorage = ({ children }) => {
   async function getUser() {
     const { url, options } = USER_GET();
     const response = await fetch(url, options);
+    console.log(response)
     const json = await response.json();
     setData(json);
     setLogin(true);
@@ -37,6 +38,7 @@ export const UserStorage = ({ children }) => {
       setLoading(true);
       const { url, options } = TOKEN_POST({ email, password });
       const tokenRes = await fetch(url, options);
+      console.log(tokenRes)
       if(!tokenRes.ok) throw new Error(`Errro: Usuário ou senha inválidos.`);
       await getUser();
       navigate.push("/dashboard");

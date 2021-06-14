@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
-import io from "socket.io-client";
+//import CHAT_POST from '../../api';
+import { io } from "socket.io-client";
 
 import TextContainer from './TextContainer';
 import Messages from './Messages/Messages';
@@ -10,7 +11,7 @@ import Input from './Input';
 
 import './Chat.css';
 
-const ENDPOINT = 'http://localhost:8080';
+const ENDPOINT = 'http://localhost:8080/chat';
 
 let socket;
 

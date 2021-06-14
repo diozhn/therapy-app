@@ -15,6 +15,7 @@ const LoginCreate = () => {
   const password = useForm("password");
   const city = useForm();
   const state = useForm();
+  const birthDate = useForm()
 
   const { userLogin } = React.useContext(UserContext);
   const { loading, error, request } = useFetch();
@@ -27,7 +28,8 @@ const LoginCreate = () => {
       email: email.value,
       password: password.value,
       city: city.value,
-      state: state.value
+      state: state.value,
+      birthDate: birthDate.value
     });
     const { response } = await request(url, options);
       if (response.ok) userLogin(email.value, password.value);
@@ -50,6 +52,9 @@ const LoginCreate = () => {
           <div className={styles.divider}>
             <Input label="Cidade" type="text" name="city" {...city} />
             <Input label="Estado" type="text" name="state" {...state} />
+          </div>
+          <div className={styles.divider}>
+            <Input label="Data de Nascimento" type="date" name="birthDate" {...birthDate} />
           </div>
 
           {loading ? (

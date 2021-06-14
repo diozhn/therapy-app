@@ -1,13 +1,14 @@
 export const API_URL = 'http://localhost:8080';
 
-export function TOKEN_POST() {
+export function TOKEN_POST(body) {
   return {
     url: API_URL + '/user',
     options: {
-      method: 'GET',
+      method: 'POST',
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(body)
     }
   }
 }
@@ -19,7 +20,7 @@ export function USER_GET() {
       method: 'GET',
       headers: {
         Authorization: 'Bearer',
-      }
+      },
     }
   }
 }
@@ -46,7 +47,7 @@ export function USER_POST(body) {
         "Allow-Controll-Origin": "*",
       },
       body: JSON.stringify(body)
-    }
+    },
   }
 }
 
@@ -55,6 +56,31 @@ export function PASSWORD_LOST(body) {
     url: API_URL + "/updateuser",
     options: {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body)
+    }
+  }
+}
+
+export function CHAT_GET() {
+  return {
+    url: API_URL + '/chat/:id',
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer',
+      }
+    }
+  }
+}
+
+export function CHAT_POST(body) {
+  return {
+    url: API_URL + "/chat",
+    options: {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
