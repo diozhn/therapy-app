@@ -1,9 +1,9 @@
-import Consultas from "../../../components/Dashboard/Pages/Consultas";
+import ConsultasComponent from "../../../components/Dashboard/Pages/Consultas";
 
 
 
-export function ConsultasComponent() {
+export function Consultas() {
   return (
-    <Consultas />
+    <ConsultasComponent />
   )
 }

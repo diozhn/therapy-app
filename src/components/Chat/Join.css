@@ -1,14 +1,20 @@
 .joinOuterContainer {
+  grid-area: content;
   display: flex;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
   align-items: center;
-  background-color: #ccc;
+  justify-content:  center;
+  width: 95vw;
+  height: 80vh;
+  background: #ccc
 }
 
 .joinInnerContainer {
-  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  height: 70%;
   padding: 50px 30px;
   border-radius: 20px;
   background: rgb(100, 182, 172);

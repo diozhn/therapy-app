@@ -9,7 +9,6 @@ import ContentProvider from "../../ContentProvider";
 
 const Dashboard = () => {
   return (
-    <ContentProvider>
       <div className={styles.gridTemplateAreas}>
         <Logo />
         <Navbar />
@@ -17,7 +16,6 @@ const Dashboard = () => {
         <Sidenav />
         <Footer />
       </div>
-    </ContentProvider>
   );
 };
 

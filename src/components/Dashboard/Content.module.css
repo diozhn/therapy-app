@@ -1,6 +1,21 @@
 .content {
   grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content:  space-between;
   width: 95vw;
   height: 80vh;
   background: #ccc
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  width: 25rem;
+  margin-left: 1rem;
+}
+
+.image {
+  width: 60%;
+  height: 100%;
 }

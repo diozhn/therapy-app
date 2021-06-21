@@ -16,7 +16,7 @@ import ContentPage from "./Pages/ContentPage";
 
 const Sidenav = () => {
 
-  const { component, setComponent } = useComponent();
+//    const { component, setComponent } = useComponent();
 
   return (
       <div className={styles.sidenav}>
@@ -26,7 +26,7 @@ const Sidenav = () => {
             placement="right"
             overlay={<Tooltip id={`tooltip-right`}>Início</Tooltip>}
           >
-            <Link onClick={() => setComponent(components[0].component)} to="/dashboard">
+            <Link to="/dashboard">
               <FaHome
                 style={{ width: "1.5rem", height: "1.5rem", cursor: "pointer" }}
               />

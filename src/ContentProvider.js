@@ -1,3 +1,4 @@
+/*
 import { createContext, useState, useContext } from "react";
 import ContentPage from "./components/Dashboard/Pages/ContentPage";
 import Consultas from "./components/Dashboard/Pages/Consultas";
@@ -62,3 +63,4 @@ export function useComponent() {
   const { component, setComponent } = context;
   return { component, setComponent };
 }
+*/

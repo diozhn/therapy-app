@@ -7,19 +7,21 @@ export function TOKEN_POST(body) {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
+        "Allow-Controll-Origin": "*",
       },
       body: JSON.stringify(body)
     }
   }
 }
 
-export function USER_GET(token) {
+export function USER_GET() {
   return {
     url: API_URL + '/login',
     options: {
       method: 'GET',
       headers: {
-        Authorization: 'Bearer' + token,
+        Authorization: 'Bearer',
+        "Allow-Controll-Origin": "*",
       },
     }
   }
@@ -32,6 +34,7 @@ export function PRO_GET() {
       method: 'GET',
       headers: {
         Authorization: 'Bearer',
+        "Allow-Controll-Origin": "*",
       }
     }
   }
@@ -58,6 +61,7 @@ export function PASSWORD_LOST(body) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        "Allow-Controll-Origin": "*",
       },
       body: JSON.stringify(body)
     }
@@ -71,6 +75,7 @@ export function CHAT_GET() {
       method: 'GET',
       headers: {
         Authorization: 'Bearer',
+        "Allow-Controll-Origin": "*",
       }
     }
   }
@@ -83,6 +88,7 @@ export function CHAT_POST(body) {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
+        "Allow-Controll-Origin": "*",
       },
       body: JSON.stringify(body)
     }

@@ -16,7 +16,7 @@ export default function SignIn() {
   }
 
   return (
-    <div className="joinOuterContainer">
+    <div className={`joinOuterContainer`}>
       <div className="joinInnerContainer">
         <h1 className="heading">Consulta</h1>
         <form onSubmit={handleSubmit}>

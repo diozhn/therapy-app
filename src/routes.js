@@ -6,8 +6,9 @@ import Register from './pages/Register'
 import { LostPasswordPage } from './pages/LostPassword'
 import { Dashboard } from './pages/Dashboard'
 import { ProRegisterPage } from './pages/ProRegister'
-import { ConsultasComponent } from './pages/Dashboard/Consultas';
+import { Consultas } from './pages/Dashboard/Consultas';
 import { ChatPage } from './pages/Dashboard/Chat';
+import { ProfissionaisPage } from './pages/Profissionais';
 
 export const Routes = () => {
   return (
@@ -17,7 +18,8 @@ export const Routes = () => {
       <Route path="/lostpassword" component={LostPasswordPage}  />
       <Route path="/proregister" component={ProRegisterPage} />
       <Route path="/dashboard" component={Dashboard} exact />
-      <Route path="/dashboard/consultas" component={ConsultasComponent} exact />
+      <Route path="/dashboard/profissionais" component={ProfissionaisPage} exact />
+      <Route path="/dashboard/consultas" component={Consultas} exact />
       <Route path="dashboard/consultas/chat" component={ChatPage} />
       <Route component = {() => <div>Pagina não encontrada</div>} />
     </Switch>
