@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { TOKEN_POST, USER_GET} from "./api";
 import { useHistory } from 'react-router-dom';
 
@@ -22,10 +22,9 @@ export const UserStorage = ({ children }) => {
     [navigate]
   );
 
-  async function getUser() {
-    const { url, options } = USER_GET();
+  async function getUser(token) {
+    const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
-    console.log(response)
     const json = await response.json();
     setData(json);
     setLogin(true);
@@ -38,9 +37,9 @@ export const UserStorage = ({ children }) => {
       setLoading(true);
       const { url, options } = TOKEN_POST({ email, password });
       const tokenRes = await fetch(url, options);
-      console.log(tokenRes)
-      if(!tokenRes.ok) throw new Error(`Errro: Usuário ou senha inválidos.`);
-      await getUser();
+      if(!tokenRes.ok) throw new Error(`Erro: Usuário ou senha inválidos.`);
+      const { token } = await tokenRes.json();
+      await getUser(token);
       navigate.push("/dashboard");
     } catch(err) {
       setError(err.message);

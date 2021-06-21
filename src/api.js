@@ -2,7 +2,7 @@ export const API_URL = 'http://localhost:8080';
 
 export function TOKEN_POST(body) {
   return {
-    url: API_URL + '/user',
+    url: API_URL + '/login',
     options: {
       method: 'POST',
       headers: {
@@ -13,14 +13,15 @@ export function TOKEN_POST(body) {
   }
 }
 
-export function USER_GET() {
+export function USER_GET(token) {
   return {
-    url: API_URL + '/user',
+    url: API_URL + '/login',
     options: {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        Authorization: 'Bearer',
+        Authorization: 'Bearer' + token,
       },
+      body: JSON.stringify(token)
     }
   }
 }
