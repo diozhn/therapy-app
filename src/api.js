@@ -17,11 +17,10 @@ export function USER_GET(token) {
   return {
     url: API_URL + '/login',
     options: {
-      method: 'POST',
+      method: 'GET',
       headers: {
         Authorization: 'Bearer' + token,
       },
-      body: JSON.stringify(token)
     }
   }
 }
