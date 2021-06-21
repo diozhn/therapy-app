@@ -7,21 +7,19 @@ export function TOKEN_POST(body) {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
-        "Allow-Controll-Origin": "*",
       },
       body: JSON.stringify(body)
     }
   }
 }
 
-export function USER_GET() {
+export function USER_GET(token) {
   return {
     url: API_URL + '/login',
     options: {
       method: 'GET',
       headers: {
-        Authorization: 'Bearer',
-        "Allow-Controll-Origin": "*",
+        Authorization: 'Bearer ' + token,
       },
     }
   }

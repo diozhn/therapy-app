@@ -11,11 +11,11 @@ function App() {
   return (
     <ChatStorage>
       <ProStorage>
-        <UserStorage>
-          <Router history={history}>
+        <Router history={history}>
+          <UserStorage>
             <Routes />
-          </Router>
-        </UserStorage>
+          </UserStorage>
+        </Router>
       </ProStorage>
     </ChatStorage>
   );

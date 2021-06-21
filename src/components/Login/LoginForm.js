@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import useForm from "../../Hooks/useForm";
 import Button from "../Forms/Button";
 import Input from "../Forms/Input";
@@ -9,6 +9,7 @@ import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
   const email = useForm();
+  const history = useHistory();
   const password = useForm();
 
   const { userLogin, error, loading } = React.useContext(UserContext);
@@ -16,8 +17,9 @@ const LoginForm = () => {
   async function handleSubmit(event) {
     event.preventDefault();
 
+
     if(email.validate() && password.validate()) {
-      userLogin(email.value, password.value);
+      await userLogin(email.value, password.value);
     }
   }
 

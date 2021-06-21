@@ -1,0 +1,9 @@
+.joinOuterContainer {
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+  width: 95vw;
+  height: 80vh;
+  background: #ccc
+}
